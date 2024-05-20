@@ -1,14 +1,17 @@
 # acti
 ACTi cameras (including those using firmware version A1D-505-S2.10.03-AC) have a web application that uses the GET method to handle requests containing sensitive information such as user account names and passwords, which can be accessed through the browser's History, referrers, web logs, and other sources expose this information.
 
+<img width="609" alt="image" src="https://github.com/W-Shaoye/acti/assets/24892698/c162cd64-86c3-4bbe-a6c8-68e3e3a5ebdb">
+
+
+
 POC
 
 GET /cgi-bin/cmd/system?GUEST_PREVIEW=0&ACCOUNT_ROOT=admin,XXXXXXXX&ACCOUNT_USER_1=XXXX,XXXXXXXX&ACCOUNT_USER_2=,&ACCOUNT_USER_3=,&ACCOUNT_USER_4=,&ACCOUNT_USER_5=,&ACCOUNT_USER_6=,&ACCOUNT_USER_7=,&ACCOUNT_USER_8=,&ACCOUNT_USER_9=,&ACCOUNT_USER_10=, HTTP/1.1
 
 Host: 127.0.0.1
 
-Authorization: Digest username="admin", realm="Authenticate Service", nonce="afbc294b39f14b60ee79468dd60ff7fc", uri="/cgi-bin/cmd/system?
-GUEST_PREVIEW=0&ACCOUNT_ROOT=admin,XXXXXXX&ACCOUNT_USER_1=XXXXX,XXXXXXXXX&ACCOUNT_USER_2=,&ACCOUNT_USER_3=,&ACCOUNT_USER_4=,&ACCOUNT_USER_5=,&ACCOUNT_USER_6=,&ACCOUNT_USER_7=,&ACCOUNT_USER_8=,&ACCOUNT_USER_9=,&ACCOUNT_USER_10=,", algorithm=MD5, response="78d7305aad71599a171f5fc12c8e2735", qop=auth, nc=00000001, cnonce="d2afc71201caef47"
+Authorization: Digest username="admin".........
 
 Pragma: no-cache
 
@@ -29,3 +32,6 @@ Accept-Language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7
 Cookie: User=; Pwd=; ViewSize_S1=640%2C360
 
 Connection: close
+
+<img width="530" alt="image" src="https://github.com/W-Shaoye/acti/assets/24892698/294343e5-6911-48b2-8109-2e9a89320be3">
+
